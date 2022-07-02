@@ -21,7 +21,8 @@ model User {
 
 model Project {
   createdAt   DateTime  @default(now())
-  description String?
+  Description String?
+  dueDate     DateTime?
   id          String    @id @default(cuid())
   name        String?
   owner       User[]

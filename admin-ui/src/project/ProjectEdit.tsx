@@ -5,9 +5,9 @@ import {
   SimpleForm,
   EditProps,
   TextInput,
+  DateTimeInput,
   ReferenceArrayInput,
   SelectArrayInput,
-  DateTimeInput,
 } from "react-admin";
 
 import { UserTitle } from "../user/UserTitle";
@@ -16,8 +16,9 @@ export const ProjectEdit = (props: EditProps): React.ReactElement => {
   return (
     <Edit {...props}>
       <SimpleForm>
-        <TextInput label="description" multiline source="description" />
-        <TextInput label="name" source="name" />
+        <TextInput label="Description" multiline source="Description" />
+        <DateTimeInput label="DueDate" source="dueDate" />
+        <TextInput label="Name" source="name" />
         <ReferenceArrayInput
           source="owner"
           reference="User"

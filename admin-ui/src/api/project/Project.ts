@@ -2,7 +2,8 @@ import { User } from "../user/User";
 
 export type Project = {
   createdAt: Date;
-  description: string | null;
+  Description: string | null;
+  dueDate: Date | null;
   id: string;
   name: string | null;
   owner?: Array<User>;

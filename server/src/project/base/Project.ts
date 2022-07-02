@@ -33,7 +33,18 @@ class Project {
   @Field(() => String, {
     nullable: true,
   })
-  description!: string | null;
+  Description!: string | null;
+
+  @ApiProperty({
+    required: false,
+  })
+  @IsDate()
+  @Type(() => Date)
+  @IsOptional()
+  @Field(() => Date, {
+    nullable: true,
+  })
+  dueDate!: Date | null;
 
   @ApiProperty({
     required: true,

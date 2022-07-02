@@ -52,7 +52,8 @@ export class ProjectControllerBase {
       data: data,
       select: {
         createdAt: true,
-        description: true,
+        Description: true,
+        dueDate: true,
         id: true,
         name: true,
         startDate: true,
@@ -77,7 +78,8 @@ export class ProjectControllerBase {
       ...args,
       select: {
         createdAt: true,
-        description: true,
+        Description: true,
+        dueDate: true,
         id: true,
         name: true,
         startDate: true,
@@ -103,7 +105,8 @@ export class ProjectControllerBase {
       where: params,
       select: {
         createdAt: true,
-        description: true,
+        Description: true,
+        dueDate: true,
         id: true,
         name: true,
         startDate: true,
@@ -138,7 +141,8 @@ export class ProjectControllerBase {
         data: data,
         select: {
           createdAt: true,
-          description: true,
+          Description: true,
+          dueDate: true,
           id: true,
           name: true,
           startDate: true,
@@ -172,7 +176,8 @@ export class ProjectControllerBase {
         where: params,
         select: {
           createdAt: true,
-          description: true,
+          Description: true,
+          dueDate: true,
           id: true,
           name: true,
           startDate: true,

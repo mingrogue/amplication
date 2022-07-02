@@ -2,7 +2,8 @@ import { SortOrder } from "../../util/SortOrder";
 
 export type ProjectOrderByInput = {
   createdAt?: SortOrder;
-  description?: SortOrder;
+  Description?: SortOrder;
+  dueDate?: SortOrder;
   id?: SortOrder;
   name?: SortOrder;
   startDate?: SortOrder;

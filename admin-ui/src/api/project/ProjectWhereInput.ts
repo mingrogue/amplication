@@ -1,10 +1,11 @@
 import { StringNullableFilter } from "../../util/StringNullableFilter";
+import { DateTimeNullableFilter } from "../../util/DateTimeNullableFilter";
 import { StringFilter } from "../../util/StringFilter";
 import { UserListRelationFilter } from "../user/UserListRelationFilter";
-import { DateTimeNullableFilter } from "../../util/DateTimeNullableFilter";
 
 export type ProjectWhereInput = {
-  description?: StringNullableFilter;
+  Description?: StringNullableFilter;
+  dueDate?: DateTimeNullableFilter;
   id?: StringFilter;
   name?: StringNullableFilter;
   owner?: UserListRelationFilter;

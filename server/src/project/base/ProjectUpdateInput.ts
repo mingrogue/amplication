@@ -11,9 +11,9 @@ https://docs.amplication.com/docs/how-to/custom-code
   */
 import { InputType, Field } from "@nestjs/graphql";
 import { ApiProperty } from "@nestjs/swagger";
-import { IsString, IsOptional, ValidateNested, IsDate } from "class-validator";
-import { UserUpdateManyWithoutProjectsInput } from "./UserUpdateManyWithoutProjectsInput";
+import { IsString, IsOptional, IsDate, ValidateNested } from "class-validator";
 import { Type } from "class-transformer";
+import { UserUpdateManyWithoutProjectsInput } from "./UserUpdateManyWithoutProjectsInput";
 @InputType()
 class ProjectUpdateInput {
   @ApiProperty({
@@ -25,7 +25,18 @@ class ProjectUpdateInput {
   @Field(() => String, {
     nullable: true,
   })
-  description?: string | null;
+  Description?: string | null;
+
+  @ApiProperty({
+    required: false,
+  })
+  @IsDate()
+  @Type(() => Date)
+  @IsOptional()
+  @Field(() => Date, {
+    nullable: true,
+  })
+  dueDate?: Date | null;
 
   @ApiProperty({
     required: false,

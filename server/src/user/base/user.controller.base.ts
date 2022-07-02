@@ -211,7 +211,8 @@ export class UserControllerBase {
       ...query,
       select: {
         createdAt: true,
-        description: true,
+        Description: true,
+        dueDate: true,
         id: true,
         name: true,
         startDate: true,
